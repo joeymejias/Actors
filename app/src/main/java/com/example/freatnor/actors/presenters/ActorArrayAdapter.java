@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.freatnor.actors.R;
 import com.example.freatnor.actors.models.Actor;
 
 import java.util.ArrayList;
@@ -42,12 +43,11 @@ public class ActorArrayAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null){
-            //ToDo add the layout resource id
-            view = LayoutInflater.from(mContext).inflate(R.layout. , viewGroup, false);
+            view = LayoutInflater.from(mContext).inflate(R.layout.custom_view, viewGroup, false);
         }
-        TextView text1 = view.findViewById(R.id.);
-        TextView text2 = view.findViewById(R.id.);
-        TextView text3 = view.findViewById(R.id.);
+        TextView text1 = (TextView) view.findViewById(R.id.actor_name);
+        TextView text2 = (TextView) view.findViewById(R.id.dob);
+        TextView text3 = (TextView) view.findViewById(R.id.oscars_won);
 
         text1.setText("Name: " + mActors.get(i).getName());
         text2.setText("DOB: " + mActors.get(i).getDateOfBirth());
