@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         ArrayList<Actor> actors = new ArrayList<>();
         actors.add(new Actor("Liono", "November 11, 1974", 1));
+        actors.add(new Actor("Leo", "November 11, 1974", 1));
         actors.add(new Actor("Matt Damon", "October 8, 1970", 1));
         actors.add(new Actor("Jennifer Lawrence", "August 15, 1990", 1));
 
